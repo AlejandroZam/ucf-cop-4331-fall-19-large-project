@@ -1,4 +1,4 @@
-#UCF Dollar Menu
+# UCF Dollar Menu
 https://ucfdollarmenu.herokuapp.com/
 
 Quick Start
