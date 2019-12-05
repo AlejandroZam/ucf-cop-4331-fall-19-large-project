@@ -9,7 +9,7 @@ router.get('/menu', (req, res) => {
 });
 
 router.get('/restaurant', (req, res) => {
-    Data.find({})
+    Restaurant.find({})
         .then(restaurantData => res.json(restaurantData));
 });
 
@@ -18,10 +18,10 @@ router.post('/menu', (req, res) =>
 {
     const { id, name, price, description} = req.body;
 
-    Menu.findOne({item})
-        .then(fail => {
-            if (fail) return res.status(400).json({ msg: 'Menu item already exists'});
-        });
+    // Menu.findOne({item})
+    //     .then(fail => {
+    //         if (fail) return res.status(400).json({ msg: 'Menu item already exists'});
+    //     });
 
     const menuItem = new Menu
     ({
