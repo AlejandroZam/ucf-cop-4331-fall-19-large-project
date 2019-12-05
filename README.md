@@ -8,9 +8,12 @@ https://ucfdollarmenu.herokuapp.com/
 # TODO
 - [ ] Verify database models hold the information we need
 
+- [ ] Find suitable API
+
 - [ ] Either take data from API or manually populate the database ourselves
 
 - [ ] Read restaurants from DB into data reducer (into an array)
+
 - [x] ~~Map restaurants to markers on map~~
 
 - [ ] Use modals or something else to display menu when a location is selected
