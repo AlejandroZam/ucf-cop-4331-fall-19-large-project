@@ -1,7 +1,6 @@
 # UCF Dollar Menu
 https://ucfdollarmenu.herokuapp.com/
 
-Quick Start
 # Install dependencies for server
 npm install
 
