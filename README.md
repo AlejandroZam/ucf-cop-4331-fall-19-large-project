@@ -6,14 +6,14 @@ https://ucfdollarmenu.herokuapp.com/
 > For reference https://react-leaflet.js.org/docs/en/intro
 
 # TODO
-> Verify database models hold the information we need
+- [ ] Verify database models hold the information we need
 
-> Either take data from API or manually populate the database ourselves
+- [ ] Either take data from API or manually populate the database ourselves
 
-> Read restaurants from DB into data reducer (into an array)
-- Map restaurants to markers on map
+- [ ] Read restaurants from DB into data reducer (into an array)
+- [x] Map restaurants to markers on map
 
-> Use modals or something else to display menu when a location is selected
+- [ ] Use modals or something else to display menu when a location is selected
 
 # Install dependencies for server
 npm install
