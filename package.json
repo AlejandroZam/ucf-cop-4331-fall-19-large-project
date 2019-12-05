@@ -1,0 +1,40 @@
+{
+  "name": "reactexpress",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.13.0"
+  },
+  "description": "Starter kit for creating React/Redux and Express apps",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "babel-eslint": "10.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.1",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "leaflet": "^1.6.0",
+    "mongoose": "^5.7.13",
+    "nodemon": "^1.19.1",
+    "package.json": "^2.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-google-maps": "^9.4.5",
+    "react-leaflet": "^2.6.0",
+    "react-redux": "^7.1.3",
+    "react-scripts": "^3.1.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  }
+}

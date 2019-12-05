@@ -1,2 +1,19 @@
-# ucf-cop-4331-fall-19-large-project
-this is a large project for POOP
+# UCF Dollar Menu
+
+## Quick Start
+
+``` bash
+# Install dependencies for server
+npm install
+
+# Run the client & server with concurrently
+npm run dev
+
+# Run the Express server only
+npm run server
+
+# Run the React client only
+npm run client
+
+# Server runs on http://localhost:5000 and client on http://localhost:3000
+```
