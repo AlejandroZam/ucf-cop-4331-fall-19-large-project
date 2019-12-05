@@ -1,5 +1,7 @@
 # UCF Dollar Menu
 
+> BTW this currently does not work on heroku, but hopefully will, something wrong with babel-eslint and react-scripts during the build process
+
 ## Quick Start
 
 ``` bash
