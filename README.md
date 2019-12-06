@@ -14,10 +14,13 @@ https://ucfdollarmenu.herokuapp.com/
 
 - [ ] Read restaurants from DB into data reducer (into an array)
 
-- [x] ~~Map restaurants to markers on map~~
+- [x] ~~Map restaurants to markers on map~~ 
 
-- [ ] Use modals or something else to display menu when a location is selected
+- [x] ~~Use modals or something else to display menu when a location is selected~~
 
+- [x] Make the UI pretty - reactstrap has some nice components that we can use, like the cards/carousel/list group  https://reactstrap.github.io/components/card/
+
+     
 # Install dependencies for server
 npm install
 
