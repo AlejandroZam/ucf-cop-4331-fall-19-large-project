@@ -18,7 +18,7 @@ https://ucfdollarmenu.herokuapp.com/
 
 - [x] ~~Use modals or something else to display menu when a location is selected~~
 
-- [x] Make the UI pretty - reactstrap has some nice components that we can use, like the cards/carousel/list group  https://reactstrap.github.io/components/card/
+- [ ] Make the UI pretty - reactstrap has some nice components that we can use, like the cards/carousel/list group  https://reactstrap.github.io/components/card/
 
      
 # Install dependencies for server
