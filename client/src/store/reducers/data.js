@@ -1,8 +1,9 @@
-import {GET_MENU, CLEAR_MENU, GET_RESTAURANTS, SET_LOADED} from '../actions/constants'
+import {GET_MENU, CLEAR_MENU, GET_RESTAURANTS} from '../actions/constants'
 
 const initalState =
 {
-    isLoaded: false,
+    restaurantsLoaded: false,
+    menuLoaded: false,
     restaurants: [],
     menu: []
 };
@@ -12,23 +13,21 @@ const dataReducer = (state = initalState, action) => {
       case GET_RESTAURANTS:
         return{
           ...state,
-          restaurants: action.payload
+          restaurants: action.payload,
+          restaurantsLoaded: true
         } 
       case GET_MENU:
           return{
             ...state,
-            menu: action.payload
+            menu: action.payload,
+            menuLoaded: true
           } 
       case CLEAR_MENU:
           return{
             ...state,
-            menu: []
+            menu: [],
+            menuLoaded: false
           }
-      case SET_LOADED:
-        return{
-          ...state,
-          isLoaded: true
-        }
       default:
         return state
     }

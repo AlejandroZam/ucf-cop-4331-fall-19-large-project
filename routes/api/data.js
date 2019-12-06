@@ -3,8 +3,10 @@ const router = express.Router();
 const Menu = require('../../models/Menu');
 const Restaurant = require('../../models/Restaurant');
 
-router.get('/menu', (req, res) => {
-    Menu.findById(req.restaurantId)
+router.post('/getMenu', (req, res) => {
+    var query = {};
+    query['id'] = req.body.id;
+    Menu.find(query)
         .then(menuData => res.json(menuData));
 });
 

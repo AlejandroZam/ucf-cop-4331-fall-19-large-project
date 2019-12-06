@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {GET_RESTAURANTS, GET_MENU, CLEAR_MENU, SET_LOADED} from './constants';
+import {GET_RESTAURANTS, GET_MENU, CLEAR_MENU} from './constants';
 
 export const getRestaurants = () => dispatch => 
 {
@@ -9,25 +9,24 @@ export const getRestaurants = () => dispatch =>
         type: GET_RESTAURANTS,
         payload: res.data
       });
-      dispatch({type: SET_LOADED});
     })
     .catch(err => {
         console.log("Error getting restaurant data...");
     });
 }
 
-export const getMenu = ({restaurantId}) => dispatch => 
+export const getMenu = (id) => dispatch => 
 {
 
-  const body = JSON.stringify({restaurantId});
-
-  axios.get('/api/data/menu', body)
-  .then(res => dispatch({
+  axios.post('/api/data/getMenu', {'id': id})
+  .then(res => {
+    dispatch({
       type: GET_MENU,
       payload: res.data
-  }))
+    });
+  })
   .catch(err => {
-      console.log("Error getting menu for restaurant" + restaurantId + "...");
+      console.log("Error getting menu for restaurant" + id + "...");
   });
 }
 

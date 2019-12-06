@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import L from 'leaflet';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import { getRestaurants, getMenu, clearMenu } from '../store/actions/dataActions';
+import { Map, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet'
+import { getRestaurants } from '../store/actions/dataActions';
+import ContactModal from './MenuModal';
 
 // Should probably just keep this collapsed or download the image and save it locally
 var myIcon = L.icon({
@@ -41,6 +42,7 @@ class OpenStreetMap extends Component {
           />
           
           <Marker icon={myIcon} position={position}>
+            <Tooltip>UCF</Tooltip>
             <Popup>
               <b>UCF</b> <br/> Example message for restaurants
             </Popup>
@@ -48,15 +50,18 @@ class OpenStreetMap extends Component {
 
           {this.props.restaurants.map(({_id, name, lat, long}) => (
             <Marker key={_id} icon={myIcon} position={[lat,long]}>
-            <Popup>
-              <b>{name}</b>
-            </Popup>
+              <Tooltip>{name}</Tooltip>
+              <Popup>
+                <b>{name}</b> <br/> <ContactModal locationId={_id} name={name}/>
+              </Popup>
             </Marker>))}
 
         </Map>
         );
       }
 
+    // Default return if no data is loaded
+    // NO CHANGES SHOULD BE PUT HERE AS THIS SHOULDN'T BE DISPLAYED
     return (
       <Map style={{height: "100%"}} center={position} zoom={this.state.zoom}>
         <TileLayer
@@ -65,6 +70,7 @@ class OpenStreetMap extends Component {
         />
         
         <Marker icon={myIcon} position={position}>
+          <Tooltip>UCF</Tooltip>
           <Popup>
             <b>UCF</b> <br/> Example message for restaurants
           </Popup>
@@ -78,9 +84,8 @@ class OpenStreetMap extends Component {
 
 const mapStateToProps = state => ({
   restaurants: state.data.restaurants,
-  menu: state.data.menu,
-  loaded: state.data.isLoaded
+  loaded: state.data.restaurantsLoaded
 });
 
 // first param = mapping, 2nd = actions, 3rd = component we are connecting to state
-export default connect(mapStateToProps, { getRestaurants, getMenu, clearMenu })(OpenStreetMap);
+export default connect(mapStateToProps, { getRestaurants })(OpenStreetMap);
