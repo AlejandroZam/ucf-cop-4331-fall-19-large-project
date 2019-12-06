@@ -12,7 +12,7 @@ https://ucfdollarmenu.herokuapp.com/
 
 - [ ] Either take data from API or manually populate the database ourselves
 
-- [x] Read restaurants from DB into data reducer (into an array)
+- [x] ~~Read restaurants from DB into data reducer (into an array)~~
 
 - [x] ~~Map restaurants to markers on map~~ 
 
