@@ -40,12 +40,21 @@ toggleMenu(){
       <Provider store={ store }>
         <div className="App">
           <Nav vertical style={{height:"100%", width: "4%", margin: "0", float:"left", backgroundColor: "#343a40"}}>
+<<<<<<< HEAD
             <Nav.Item>
               <Nav.Link>
                 <MenuButton handleMouseDown={this.handleMouseDown}/>
                 <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
               </Nav.Link>
             </Nav.Item>
+=======
+            <NavItem>
+              <NavLink>
+                <MenuButton handleMouseDown={this.handleMouseDown}/>
+                <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
+              </NavLink>
+            </NavItem>
+>>>>>>> b4b269ed4ded3e0868d3efa48b08459e15c95e63
           </Nav>
           <OpenStreetMap/>
         </div>
