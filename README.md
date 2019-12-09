@@ -6,7 +6,7 @@ https://ucfdollarmenu.herokuapp.com/
 > For reference https://react-leaflet.js.org/docs/en/intro
 
 # TODO
-- [ ] Verify database models hold the information we need
+- [x] Verify database models hold the information we need
 
 - [ ] Find suitable API
 
@@ -20,7 +20,7 @@ https://ucfdollarmenu.herokuapp.com/
 
 - [x] ~~Use modals or something else to display menu when a location is selected~~
 
-- [ ] Make the UI for the menu look pretty - reactstrap has some nice components that we can use, like the cards/carousel/list group  https://reactstrap.github.io/components/card/
+- [x] Make the UI for the menu look pretty - reactstrap has some nice components that we can use, like the cards/carousel/list group 
 
      
 # Install dependencies for server
