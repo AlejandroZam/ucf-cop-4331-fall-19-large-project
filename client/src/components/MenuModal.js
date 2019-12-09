@@ -41,7 +41,9 @@ class MenuModal extends Component
                         <ModalHeader toggle={this.toggle}>{this.props.name}</ModalHeader>
                         <ModalBody>
                             {this.props.menu.map(({ _id, name, price}) => (
-                                <Label key={_id}>{name}: {price}</Label>
+                                <div key={_id}>
+                                    <Label>{name}: {price}</Label>
+                                </div>
                             ))}
                             <Button
                                 color="dark"
