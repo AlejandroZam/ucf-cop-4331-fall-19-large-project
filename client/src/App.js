@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import './App.css';
 import store from './store'
-import OpenStreetMap from './components/OpenStreetMap'
+import OpenStreetMap from './components/map/OpenStreetMap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import MenuButton from './components/menu/MenuButton'
@@ -39,14 +39,14 @@ toggleMenu(){
 
       <Provider store={ store }>
         <div className="App">
-        <Nav vertical style={{height:"100%", width: "5%", margin: "0", float:"left", backgroundColor: "#343a40"}}>
-          <NavItem>
-            <NavLink>
-              <MenuButton handleMouseDown={this.handleMouseDown}/>
-              <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
-            </NavLink>
-          </NavItem>
-        </Nav>
+          <Nav vertical style={{height:"100%", width: "4%", margin: "0", float:"left", backgroundColor: "#343a40"}}>
+            <NavItem>
+              <NavLink>
+                <MenuButton handleMouseDown={this.handleMouseDown}/>
+                <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
+              </NavLink>
+            </NavItem>
+          </Nav>
           <OpenStreetMap/>
         </div>
       </Provider>

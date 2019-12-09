@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Accordion, Card } from 'react-bootstrap';
 import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Alert} from 'reactstrap';
 import { connect } from 'react-redux';
-import { getMenu, clearMenu } from '../store/actions/dataActions';
+import { getMenu, clearMenu } from '../../store/actions/dataActions';
 
 class MenuModal extends Component 
 {
@@ -40,11 +41,23 @@ class MenuModal extends Component
                         toggle={this.toggle}>
                         <ModalHeader toggle={this.toggle}>{this.props.name}</ModalHeader>
                         <ModalBody>
-                            {this.props.menu.map(({ _id, name, price}) => (
-                                <div key={_id}>
-                                    <Label>{name}: {price}</Label>
-                                </div>
-                            ))}
+                            <Accordion style={{justifyContent: 'center'}}>
+                                {this.props.menu.map(({ _id, name, price, description}) => (
+                                    <Card key={_id}>
+
+                                        <Accordion.Toggle style={{padding:'0px, 4rem'}} as={Card.Header} eventKey={_id}>
+                                            <p style={{float:"left", margin:"0"}}>{name}</p>
+                                            <p style={{float:"right", margin:"0"}}>{price}</p>
+                                        </Accordion.Toggle>
+                                        
+                                        <Accordion.Collapse eventKey={_id}>
+                                            <Card.Body>
+                                                {description}
+                                            </Card.Body>
+                                        </Accordion.Collapse>
+                                    </Card>
+                                ))}
+                            </Accordion>
                             <Button
                                 color="dark"
                                 style={{marginTop: '2rem'}}
