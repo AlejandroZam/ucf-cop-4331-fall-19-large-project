@@ -5,8 +5,9 @@ import store from './store'
 import OpenStreetMap from './components/OpenStreetMap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import MenuButton from './MenuButton'
-import Menu from './Menu'
+import MenuButton from './components/menu/MenuButton'
+import Menu from './components/menu/Menu'
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 class App extends Component {
 
@@ -38,10 +39,14 @@ toggleMenu(){
 
       <Provider store={ store }>
         <div className="App">
-
-        <MenuButton handleMouseDown={this.handleMouseDown}/>
-      <Menu handleMouseDown={this.handleMouseDown}
-      menuVisibility={this.state.visible}/>
+        <Nav vertical style={{height:"100%", width: "5%", margin: "0", float:"left", backgroundColor: "#343a40"}}>
+          <NavItem>
+            <NavLink>
+              <MenuButton handleMouseDown={this.handleMouseDown}/>
+              <Menu handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible}/>
+            </NavLink>
+          </NavItem>
+        </Nav>
           <OpenStreetMap/>
         </div>
       </Provider>
