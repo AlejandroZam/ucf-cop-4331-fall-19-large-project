@@ -20,11 +20,6 @@ router.post('/menu', (req, res) =>
 {
     const { id, name, price, description} = req.body;
 
-    // Menu.findOne({item})
-    //     .then(fail => {
-    //         if (fail) return res.status(400).json({ msg: 'Menu item already exists'});
-    //     });
-
     const menuItem = new Menu
     ({
         id,
@@ -34,7 +29,6 @@ router.post('/menu', (req, res) =>
     });
 
     menuItem.save().then(menuItem => {
-        // TODO: Determine if anything even needs to be saved
         res.json();
     });
 });
@@ -44,11 +38,6 @@ router.post('/restaurant', (req, res) =>
 {
     const {name, lat, long} = req.body;
 
-    // Restaurant.findOne({location})
-    //     .then(fail => {
-    //         if (fail) return res.status(400).json({ msg: 'Restaurant already exists'});
-    //     });
-
     const newRestaurant = new Restaurant
     ({
         name,
@@ -57,7 +46,6 @@ router.post('/restaurant', (req, res) =>
     });
 
     newRestaurant.save().then(newRestaurant => {
-        // TODO: Determine if anything even needs to be saved
         res.json();
     });
 });
