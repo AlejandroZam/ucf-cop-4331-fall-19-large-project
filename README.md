@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Mobile App
 
 1. Clone the repo if you havnt already
@@ -15,7 +14,7 @@ yarn start
 
 A terminal window should pop up as well as a tab in your browser. Scan the QR code with your phone. 
 If you have an android device some parts of the app might look weird, sorry
-=======
+
 # UCF Dollar Menu
 https://ucfdollarmenu.herokuapp.com/
 
@@ -54,4 +53,3 @@ npm run server
 npm run client
 
 Server runs on http://localhost:5000 and client on http://localhost:3000
->>>>>>> b2478f83f360e23c4959e3f1856523857575ddeb

@@ -19,18 +19,6 @@ export default function FavoritesScreen() {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}
       >
-        <Text>
-          A
-        </Text>
-        <Text>
-          A
-        </Text>
-        <Text>
-          A
-        </Text>
-        <Text>
-          A
-        </Text>
       </ScrollView>
     </View>
   );

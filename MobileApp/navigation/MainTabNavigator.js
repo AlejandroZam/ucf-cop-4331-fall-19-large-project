@@ -51,29 +51,29 @@ MapStack.navigationOptions = {
 
 MapStack.path = '';
 
-const FavoritesStack = createStackNavigator(
-  {
-    Favorites: FavoritesScreen,
-  },
-  config
-);
+// const FavoritesStack = createStackNavigator(
+//   {
+//     Favorites: FavoritesScreen,
+//   },
+//   config
+// );
 
-FavoritesStack.navigationOptions = {
-  tabBarLabel: 'Favorites',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-star' : 'md-options'} />
-  ),
-};
+// FavoritesStack.navigationOptions = {
+//   tabBarLabel: 'Favorites',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-star' : 'md-options'} />
+//   ),
+// };
 
-FavoritesStack.path = '';
+//FavoritesStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   BrowseStack,
   MapStack,
-  FavoritesStack,
+  //FavoritesStack,
 },
 {
-  initialRouteName: "MapStack",
+  initialRouteName: "BrowseStack",
   tabBarOptions: {
     activeTintColor: '#ffffff',
     inactiveTintColor: '#000000',

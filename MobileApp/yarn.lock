@@ -5628,6 +5628,11 @@ react-native-gesture-handler@~1.3.0:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-ionicons@^4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/react-native-ionicons/-/react-native-ionicons-4.6.3.tgz#989886f1a9af61cf7a5a8b2c81a86bafd6718061"
+  integrity sha512-5UgYIJ/BDuKCPlrmZSUDouCCXeiGsVq8TMwKK3l1T54z+IVNC0OKIxAIhitVIek6CLvtjVtBV/0qJyr5o6XCVg==
+
 react-native-iphone-x-helper@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
