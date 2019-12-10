@@ -18,7 +18,7 @@ router.get('/restaurant', (req, res) => {
 // Create new menuItem
 router.post('/menu', (req, res) => 
 {
-    const { id, name, price, description} = req.body;
+    const { id, name, price, description, isCombo} = req.body;
 
     const menuItem = new Menu
     ({
