@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Accordion, Card, Button, Modal} from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { getMenu, clearMenu } from '../../store/actions/dataActions';
+import { getMenu } from '../../store/actions/dataActions';
 
 class MenuModal extends Component 
 {
@@ -11,26 +11,14 @@ class MenuModal extends Component
         modal: false,
     }
 
-    componentDidMount()
-    {
-        this.props.clearMenu();
-        this.props.getMenu(this.props.locationId);
-    }
-
     toggle = () => 
-    {
-        this.setState({
-            modal: !this.state.modal,
-        });
-    }
-
-    handleClose = () => 
-    {
-        this.toggle();
-    }
-    handleShow = () => 
-    {
-        this.toggle();
+    {   
+        this.props.getMenu(this.props.locationId);
+        setTimeout(() => {
+            this.setState({
+                modal: !this.state.modal,
+            });
+        }, 150);
     }
 
     render()
@@ -39,15 +27,17 @@ class MenuModal extends Component
         {
             return(
                 <div>
+                    <p>{this.props.address}</p>
                     <Button
+                        block
                         color="primary"
-                        style={{ marginBottom: '2rem' }}
+                        style={{ marginTop: '1rem' }}
                         onClick={this.toggle}
                     >View Menu</Button>
                     <Modal
                         show={this.state.modal}
                         onHide={this.toggle}>
-                        <Modal.Header toggle={this.toggle}>{this.props.name}</Modal.Header>
+                        <Modal.Header>{this.props.name}</Modal.Header>
                         <Modal.Body>
                             <Accordion style={{justifyContent: 'center'}}>
                                 {this.props.menu.map(({ _id, name, price, description}) => (
@@ -80,11 +70,13 @@ class MenuModal extends Component
 
         return (
             <div>
-               <Button
-                    color="primary"
-                    style={{ marginBottom: '2rem' }}
-                    onClick={this.toggle}
-                >View Menu</Button>
+               <p>{this.props.address}</p>
+                    <Button
+                        block
+                        color="primary"
+                        style={{ marginTop: '1rem' }}
+                        onClick={this.toggle}
+                    >View Menu</Button>
             </div>
         );
     }
@@ -95,4 +87,4 @@ const mapStateToProps = state => ({
     loaded: state.data.menuLoaded
 });
 
-export default connect(mapStateToProps, { getMenu, clearMenu })(MenuModal);
+export default connect(mapStateToProps, { getMenu })(MenuModal);

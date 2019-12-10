@@ -48,11 +48,11 @@ class OpenStreetMap extends Component {
             </Popup>
           </Marker>
 
-          {this.props.restaurants.map(({_id, name, lat, long}) => (
+          {this.props.restaurants.map(({_id, name, lat, long, address, style}) => (
             <Marker key={_id} icon={myIcon} position={[lat,long]}>
               <Tooltip>{name}</Tooltip>
               <Popup>
-                <b>{name}</b> <br/> <ContactModal locationId={_id} name={name}/>
+                <b>{name + " (" + style + " )"}</b> <br/> <ContactModal locationId={_id} name={name} address={address}/>
               </Popup>
             </Marker>))}
 

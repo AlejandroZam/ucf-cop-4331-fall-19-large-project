@@ -24,7 +24,6 @@ constructor(props,context){
 handleMouseDown(e) {
   this.toggleMenu();
 
-  console.log("clicked");
   e.stopPropagation();
 }
 
@@ -39,7 +38,7 @@ toggleMenu(){
 
       <Provider store={ store }>
         <div className="App">
-          <Nav vertical style={{height:"100%", width: "4%", margin: "0", float:"left", backgroundColor: "#343a40"}}>
+          <Nav vertical="true" style={{height:"100%", width: "4%", margin: "0", float:"left", backgroundColor: "#343a40"}}>
             <Nav.Item>
               <Nav.Link>
                 <MenuButton handleMouseDown={this.handleMouseDown}/>

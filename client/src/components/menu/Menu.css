@@ -31,3 +31,7 @@
   #flyoutMenu h2 a:hover {
     text-decoration: underline;
   }
+
+  .btn-link {
+    color: black;
+  }

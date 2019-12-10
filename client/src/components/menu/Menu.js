@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { Button } from 'react-bootstrap'
 import "./Menu.css";
  
 class Menu extends Component {
+
+
   render() {
     var visibility = "hide";
  
@@ -13,10 +16,10 @@ class Menu extends Component {
       <div id="flyoutMenu"
            onMouseDown={this.props.handleMouseDown} 
            className={visibility}>
-        <h2><a href="#">Home</a></h2>
-        <h2><a href="#">About</a></h2>
-        <h2><a href="#">Search</a></h2>
-        <h2><a href="#">Favorites</a></h2>
+        <h2><Button variant="link"><h2>Home</h2></Button></h2>
+        <h2><Button variant="link"><h2>About</h2></Button></h2>
+        <h2><Button variant="link"><h2>Search</h2></Button></h2>
+        <h2><Button variant="link"><h2>Favorite</h2></Button></h2>
       </div>
     );
   }
