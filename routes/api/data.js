@@ -25,7 +25,8 @@ router.post('/menu', (req, res) =>
         id,
         name,
         price,
-        description
+        description,
+        isCombo
     });
 
     menuItem.save().then(menuItem => {
