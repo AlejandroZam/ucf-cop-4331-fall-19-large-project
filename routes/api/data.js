@@ -36,13 +36,15 @@ router.post('/menu', (req, res) =>
 // Create new location
 router.post('/restaurant', (req, res) => 
 {
-    const {name, lat, long} = req.body;
+    const {name, lat, long, address, style} = req.body;
 
     const newRestaurant = new Restaurant
     ({
         name,
         lat,
-        long
+        long,
+        address,
+        style
     });
 
     newRestaurant.save().then(newRestaurant => {
