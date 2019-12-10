@@ -27,6 +27,12 @@ const Menu = new Schema
         required: true
     },
 
+    isCombo: 
+    {
+        type: String,
+        required: true
+    },
+
     date: {
         type: Date,
         default: Date.now
