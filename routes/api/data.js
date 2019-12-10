@@ -7,6 +7,7 @@ router.post('/getMenu', (req, res) => {
     var query = {};
     query['id'] = req.body.id;
     Menu.find(query)
+        .sort({price: -1})
         .then(menuData => res.json(menuData));
 });
 
