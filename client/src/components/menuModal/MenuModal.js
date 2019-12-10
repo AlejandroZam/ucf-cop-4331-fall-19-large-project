@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Accordion, Card, Button, Modal} from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { getMenu } from '../../store/actions/dataActions';
+import { getMenu, clearMenu } from '../../store/actions/dataActions';
 
 class MenuModal extends Component 
 {
@@ -11,14 +11,19 @@ class MenuModal extends Component
         modal: false,
     }
 
-    toggle = () => 
-    {   
+    componentDidMount()
+    {
         this.props.getMenu(this.props.locationId);
-        setTimeout(() => {
-            this.setState({
-                modal: !this.state.modal,
-            });
-        }, 150);
+    }
+
+    toggle = () => 
+    {
+        this.props.clearMenu();
+        this.props.getMenu(this.props.locationId);
+
+        this.setState({
+            modal: !this.state.modal,
+        });
     }
 
     render()
@@ -87,4 +92,4 @@ const mapStateToProps = state => ({
     loaded: state.data.menuLoaded
 });
 
-export default connect(mapStateToProps, { getMenu })(MenuModal);
+export default connect(mapStateToProps, { getMenu, clearMenu })(MenuModal);

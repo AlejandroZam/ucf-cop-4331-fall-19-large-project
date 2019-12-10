@@ -52,7 +52,7 @@ class OpenStreetMap extends Component {
             <Marker key={_id} icon={myIcon} position={[lat,long]}>
               <Tooltip>{name}</Tooltip>
               <Popup>
-                <b>{name + " (" + style + " )"}</b> <br/> <ContactModal locationId={_id} name={name} address={address}/>
+                <b>{name + " (" + style + ")"}</b> <br/> <ContactModal locationId={_id} name={name} address={address}/>
               </Popup>
             </Marker>))}
 
