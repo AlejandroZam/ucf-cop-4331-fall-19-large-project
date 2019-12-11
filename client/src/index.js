@@ -241,7 +241,7 @@ var swag =
                     },
                     "400": {
                         "description": "Error retrieving restaurant information"
-                    }
+                    },
                 }
             },
             "post": {
@@ -268,7 +268,6 @@ var swag =
             }
         }
     }
-}
 }
 }
 
