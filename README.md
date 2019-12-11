@@ -7,6 +7,8 @@ https://ucfdollarmenu.herokuapp.com/
 
 - [ ] Add Search functionality
 
+- [ ] Implement Swagger
+
 - [x] ~~Verify database models hold the information we need~~
 
 - [x] ~~Either take data from API or manually populate the database ourselves~~
