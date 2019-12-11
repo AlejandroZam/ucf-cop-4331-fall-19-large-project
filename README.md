@@ -1,24 +1,7 @@
-# Mobile App
 
-1. Clone the repo if you havnt already
-2. Install yarn [here](https://yarnpkg.com/lang/en/docs/install/#windows-stable)
-3. Install expo:
-```bash
-yarn add -g expo-cli
-```
-4. Install the Expo app on your phone 
-5. Start the app
-```bash
-yarn start
-```
+#  UCF Dollar Menu TODO
 
-A terminal window should pop up as well as a tab in your browser. Scan the QR code with your phone. 
-If you have an android device some parts of the app might look weird, sorry
-
-# UCF Dollar Menu
-https://ucfdollarmenu.herokuapp.com/
-
-# TODO
+> https://ucfdollarmenu.herokuapp.com/
 
 - [ ] Add any missing locations to database
 
@@ -40,6 +23,22 @@ https://ucfdollarmenu.herokuapp.com/
 
 - [x] ~~Make the UI for the menu look pretty - reactstrap has some nice components that we can use, like the cards/carousel/list group~~
 
+# Mobile App
+
+1. Clone the repo if you havnt already
+2. Install yarn [here](https://yarnpkg.com/lang/en/docs/install/#windows-stable)
+3. Install expo:
+```bash
+yarn add -g expo-cli
+```
+4. Install the Expo app on your phone 
+5. Start the app
+```bash
+yarn start
+```
+
+A terminal window should pop up as well as a tab in your browser. Scan the QR code with your phone. 
+If you have an android device some parts of the app might look weird, sorry
 
      
 # Install dependencies for server
