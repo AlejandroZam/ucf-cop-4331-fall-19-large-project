@@ -68,14 +68,6 @@ class OpenStreetMap extends Component {
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        
-        <Marker icon={myIcon} position={position}>
-          <Tooltip>UCF</Tooltip>
-          <Popup>
-            <b>UCF</b> <br/> Example message for restaurants
-          </Popup>
-        </Marker>
-
       </Map>
     );
 
