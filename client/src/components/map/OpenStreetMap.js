@@ -41,13 +41,6 @@ class OpenStreetMap extends Component {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           
-          <Marker icon={myIcon} position={position}>
-            <Tooltip>UCF</Tooltip>
-            <Popup>
-              <b>UCF</b> <br/> Example message for restaurants
-            </Popup>
-          </Marker>
-
           {this.props.restaurants.map(({_id, name, lat, long, address, style}) => (
             <Marker key={_id} icon={myIcon} position={[lat,long]}>
               <Tooltip>{name}</Tooltip>
