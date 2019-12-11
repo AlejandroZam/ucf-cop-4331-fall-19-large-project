@@ -16,6 +16,11 @@ router.get('/restaurant', (req, res) => {
         .then(restaurantData => res.json(restaurantData));
 });
 
+router.get('/menu', (req, res) => {
+    Menu.find({})
+        .then(menuData => res.json(menuData)) 
+})
+
 // Create new menuItem
 router.post('/menu', (req, res) => 
 {
