@@ -64,6 +64,85 @@ var swag =
                         "description": "Error retrieving restaurant information"
                     }
                 }
+            },
+            "post": {
+                "tags": [
+                    "Restaurants"
+                ],
+                "summary": "Enter new restaurant",
+                "description": "Creates new restaurant entry in DB",
+                "operationId": "postRestaurant",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                    },
+                    "400": {
+                        "description": "Error posting data"
+                    }  
+                }
+            }
+        },
+        "/api/data/menu": {
+            "get": {
+                "tags": [
+                    "Menu"
+                ],
+                "summary": "Get list of all menu items",
+                "description": "Returns array of menu items",
+                "operationId": "getMenus",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                        
+                            "title": "Menus",
+                            "required": [ "id", "name", "price", "description"],
+                            "properties": {
+                                "_id": { "type": "string" },
+                                "id": { "type": "string" },    
+                                "name": { "type": "string" },
+                                "price": { "type": "string" },
+                                "description": { "type": "string" },
+                                "isCombo": { "type": "string" },
+                                "date": { "type": "string", "format": "date-time" },
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Error retrieving restaurant information"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Menu"
+                ],
+                "summary": "Enter new menu",
+                "description": "Creates new menu item entry in DB",
+                "operationId": "postMenu",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                    },
+                    "400": {
+                        "description": "Error posting data"
+                    }  
+                }
             }
         }
     }
