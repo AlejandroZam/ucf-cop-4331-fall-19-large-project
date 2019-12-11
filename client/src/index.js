@@ -75,7 +75,7 @@ var swag =
                 "tags": [
                     "Restaurants"
                 ],
-                "summary": "Create a restaurant",
+                "summary": "Creates a restaurant",
                 "description": "Creates a restaurant",
                 "schema" :{
                     "title": "Restaurants",
@@ -100,33 +100,31 @@ var swag =
                 ],
                 "parameters": [
                     {
-                        "name": "name",
+                        "name": "body",
                         "in": "body",
-                        "description": "Name of restaurant",
+                        "description": "Id of restaurant",
                         "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "name": "lat",
-                        "in": "body",
-                        "description": "Lattitude",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "name": "long",
-                        "in": "body",
-                        "description": "Longitude",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "name": "style",
-                        "in": "body",
-                        "description": "Type of restaurant",
-                        "required": true,
-                        "type": "string"
-                    },
+                        "type": "string",
+                        "schema": {
+                            "properties": {
+                                "name": {
+                                    "type" : "string"
+                                },
+                                "lat": {
+                                    "type" : "string"
+                                },
+                                "long": {
+                                    "type" : "string"
+                                },
+                                "address": {
+                                    "type" : "string"
+                                },
+                                "style": {
+                                    "type" : "string"
+                                },
+                            }
+                        }
+                    }
                 ],
                 "responses": {
                     "200": {
@@ -138,7 +136,7 @@ var swag =
                 }
             },
         },
-        "/api/data/menu": {
+        "/api/data/getMenu": {
             "post": {
                 "tags": [
                     "Menus"
@@ -154,11 +152,18 @@ var swag =
                 ],
                 "parameters": [
                     {
-                        "name": "restaurantId",
+                        "name": "body",
                         "in": "body",
                         "description": "Id of restaurant",
                         "required": true,
-                        "type": "string"
+                        "type": "string",
+                        "schema": {
+                            "properties": {
+                                "id": {
+                                    "type" : "string"
+                                }
+                            }
+                        }
                     }
                 ],
                 "responses": {
@@ -187,44 +192,10 @@ var swag =
                     },
                 }
             },
-            "get": {
-                "tags": [
-                    "Menu"
-                ],
-                "summary": "Get list of all menu items",
-                "description": "Returns array of menu items",
-                "operationId": "getMenus",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                        "schema": {
-                        
-                            "title": "Menus",
-                            "required": [ "id", "name", "price", "description"],
-                            "properties": {
-                                "_id": { "type": "string" },
-                                "id": { "type": "string" },    
-                                "name": { "type": "string" },
-                                "price": { "type": "string" },
-                                "description": { "type": "string" },
-                                "isCombo": { "type": "string" },
-                                "date": { "type": "string", "format": "date-time" },
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Error retrieving restaurant information"
-                    },
-                }
-            }
-        }
     }
-}}
-
-
+}
+}
+}
 
 
 const routing = (
