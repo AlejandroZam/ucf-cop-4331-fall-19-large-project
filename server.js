@@ -1,9 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const config = require('config');
+const pathToSwaggerUi = require('swagger-ui-dist').absolutePath();
 
 const app = express();
 app.use(express.json());
+app.use(express.static(pathToSwaggerUi));
 const db = config.get('mongoURI');
 
 // Connect to Mongo
