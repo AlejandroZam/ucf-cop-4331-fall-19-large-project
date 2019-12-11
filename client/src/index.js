@@ -75,8 +75,8 @@ var swag =
                 "tags": [
                     "Restaurants"
                 ],
-                "summary": "Get list of restaurants",
-                "description": "Returns array of restaurants",
+                "summary": "Create a restaurant",
+                "description": "Creates a restaurant",
                 "schema" :{
                     "title": "Restaurants",
                     "required": [ "name", "lat", "long", "address", "style" ],
