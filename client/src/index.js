@@ -187,30 +187,6 @@ var swag =
                     },
                 }
             },
-            "post": {
-                "tags": [
-                    "Restaurants"
-                ],
-                "summary": "Enter new restaurant",
-                "description": "Creates new restaurant entry in DB",
-                "operationId": "postRestaurant",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                    },
-                    "400": {
-                        "description": "Error posting data"
-                    }  
-                }
-            }
-        },
-        "/api/data/menu": {
             "get": {
                 "tags": [
                     "Menu"
@@ -243,33 +219,12 @@ var swag =
                         "description": "Error retrieving restaurant information"
                     },
                 }
-            },
-            "post": {
-                "tags": [
-                    "Menu"
-                ],
-                "summary": "Enter new menu",
-                "description": "Creates new menu item entry in DB",
-                "operationId": "postMenu",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "successful operation",
-                    },
-                    "400": {
-                        "description": "Error posting data"
-                    }  
-                }
             }
         }
     }
-}
-}
+}}
+
+
 
 
 const routing = (
