@@ -1,12 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const config = require('config');
-const pathToSwaggerUi = require('swagger-ui-dist').absolutePath();
+var cors = require('cors');
 
 const app = express();
 app.use(express.json());
-app.use(express.static(pathToSwaggerUi));
 const db = config.get('mongoURI');
+
+app.use(cors());
 
 // Connect to Mongo
 mongoose.connect(db, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
